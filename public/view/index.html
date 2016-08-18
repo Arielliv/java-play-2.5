@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <meta charset="UTF-8">
     <title>test</title>
 </head>
-<body>
-
+<body ng-controller="myCtrl">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h1 class="col-lg-12">JAVA-SSE-PLAY-2.5</h1>
+            <label>send msg : </label>
+            <input name="msg" ng-model="msg" class="form-control">
+            <button class="btn-primary" ng-click="sendMsg(msg)">send</button>
+        </div>
+    </div>
+    <div class="row">
+        <h2 class="col-lg-10 col-lg-offset-1">messages received : </h2>
+        <div class="col-lg-10 col-lg-offset-1">{{messages}}</div>
+    </div>
+</div>
 </body>
+<footer>
+    <script src="/public/javascripts/jquery-1.9.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/public/javascripts/app.js"></script>
+</footer>
 </html>
